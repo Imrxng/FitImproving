@@ -1,0 +1,804 @@
+:root{
+    --themecolor: #996E5D; 
+    --secondThemeColor: #fcf8ec;
+    /*#6DA39C old theme color*/
+    /*#F2FCF5 second old theme color*/
+    --white: white;
+}
+
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100%;
+}
+
+body{
+    display: grid;
+    background: linear-gradient(to right, var(--white), var(--secondThemeColor));
+    grid-template-areas:
+    'header header'
+    'main Aside'
+    'footer footer';
+    grid-template-columns: 3fr 1fr;
+}
+
+#BodyIndex{
+    grid-template-areas:
+    'header'
+    'main'
+    'footer';
+    grid-template-columns: 1fr;
+}
+
+
+/*header*/
+
+    header{
+    display: flex;
+    grid-area: header;
+    background-color:  var(--themecolor); 
+    color: var(--white) ; 
+    justify-content: space-between;
+    align-items: center; 
+    height: 140px;  
+}
+
+#LogoTop{
+    padding-left: 2rem;
+}
+
+ nav{
+    font-weight: bolder;
+    word-spacing: 1rem;
+}
+
+.NavFooter{
+    font-weight: bold;
+    word-spacing: 0rem;
+}
+
+ header a:hover, a:active,.mainContact form input[type = "submit"]:hover, footer a:hover, .LinksProductenShop:hover{
+    text-decoration: underline;
+    color: lightgray;
+}
+
+input[type = "search"]{
+    border: var(--white) 1px solid;
+    text-align: center;
+    padding: 4px;
+    color: var(--themecolor);
+    background-color: var(--white);
+    font-size: medium;       
+}
+
+#ZoekbalkSubmit{
+    visibility: hidden;
+}
+
+.ZoekbalkShop > input[type = "search"]{
+    font-size: 2rem;
+    border: #996E5D solid 1px;
+}
+
+
+.ZoekbalkShop {
+    display: flex;
+    justify-content: center;
+    }
+
+#FormHeaderSearch{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Vergrootglas{
+    padding-right: 9px;
+    width: 35px;
+}
+
+#VergrootglasShop{
+    width: 3rem;
+    margin-right: 1rem;
+}
+
+
+#Winkelwagen{
+    background-color: var(--themecolor);
+    color: black;
+    margin-right: 4rem;
+}
+
+
+.Actief{
+    text-decoration: underline;
+}
+
+/*header*/
+
+/*main*/
+main{
+    grid-area: main ;
+}
+
+.FotoVoorpagina{
+background-image: url("../assets/Images/Fotohome.webp"); 
+background-size: cover;
+height: 40rem;
+position: relative;
+}
+
+.TekstInFoto{
+    position: absolute;
+    font-size:xx-large;
+    font-weight: bold;
+    top: 45%;
+    left: 13%;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--themecolor);
+}
+
+.TekstInFoto button{
+    padding: 5px;
+}
+
+.TekstInFoto:hover{
+    background-color: rgba(255, 255, 255, 0.473);
+    color: black;
+}
+
+.ReclameProducten{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 2rem 0 6rem;   
+    text-align: center;
+    align-items: center;
+    border-bottom: var(--themecolor) solid 5px;
+    gap: 2rem;
+}
+
+.ReclameProducten article, .ProductenShop article{
+    border: var(--themecolor) solid 12px;
+    background-color: var(--themecolor);
+    border-radius: 10%;
+}
+
+.ProductenShop article figure img, .ReclameProducten article figure img{
+    border-radius: 10%;
+}
+
+.ProductenShop article:hover, .ReclameProducten article:hover{
+    border: solid 12px #B8887A;
+    background-color: #B8887A;
+}
+
+.ProductenShop article section p, .ReclameProducten article section p{
+    font-size: 15px;
+}
+
+figcaption{
+    text-align: left;
+}
+
+.ReclameProducten article section, .ProductenShop article section{
+display: flex;
+padding: 1rem;
+font-weight: bold;
+align-items: center;
+justify-content:space-evenly;
+color: var(--white);
+} 
+
+.ReclameProducten article section form, .ProductenShop article form {
+    border-radius: 20%;
+    color: var(--themecolor);
+    padding: 3px;
+    text-align: center;
+    background-color: var(--white);
+}
+
+.Prijs{
+    color: red;
+}
+
+a, li, p{
+    font-size: 20px;
+}
+
+h1{
+    margin: 0rem auto 0rem;
+    font-weight: bolder;
+    font-size: 5rem;
+    text-transform: uppercase;
+    color:var(--themecolor);
+    text-align: center;
+    padding: 2rem 0 2rem
+}
+
+.TussentitelSale{
+    margin: 5rem auto 3rem;    
+}
+
+.KlantBox{
+    height: 175px;
+    width: 350px;
+    background-color: var(--themecolor);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 5%;
+}
+
+#AlleKlanten{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 0 4rem 0;
+    justify-content: center;
+    font-size: 20px;
+    gap: 4rem;
+}
+
+h2, blockquote{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--themecolor);
+    text-transform: uppercase;
+    font-weight: bolder
+}
+
+#TussentitelReviews{
+    padding: 1rem 0 1rem;
+    margin: 1rem auto 0;
+}
+
+.Nieuwsletter{
+    padding-top: 4rem;
+}
+
+#About{
+    padding: 6rem 0 3rem;
+    font-size: 3rem;
+}
+
+#NieuwsletterTekst{
+    display: flex;
+    padding: 2rem 0 4rem;
+    font-size: large;
+    font-weight: bolder;
+    justify-content:center;
+    gap: 2rem;
+    border-bottom: var(--themecolor) 5px solid;
+}
+
+#Email, #AanmeldenNieuwsbrief{
+    padding: 4px;
+    font-weight: normal;
+    text-align: left;
+    border: var(--themecolor) 5px solid;
+}  
+
+#AanmeldenNieuwsbrief{
+    margin-left: -37px; 
+    background-color: var(--themecolor);
+    color: var(--white);
+    font-weight: bold;
+}
+
+#AboutParagraaf{
+    padding: 1rem;
+    margin: 0 2rem 4rem 2rem;
+    width: 40%;
+    text-align: justify;
+    color: var(--white);
+    word-spacing: 2px;
+    background-color: var(--themecolor);
+}
+
+.FotoZelfQuote{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 5rem;
+    border-bottom: var(--themecolor) 5px solid;   
+}
+
+#animationDumbell{
+    animation: rotate 8s ease-out infinite;
+}
+
+blockquote{
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.RevieuwsKlanten{
+    padding: 3rem 0 4rem 2rem ;
+    margin: 0 auto 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#PersoonI, #PersoonB, #PersoonO, #PersoonL{
+    display: inline-flex;
+    background-color: rgb(93, 253, 0);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 10px;
+    height: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#PersoonO, #PersoonL{
+    background-color: orangered;
+}
+
+.RevieuwsKlanten section {
+    background-color: var(--themecolor);
+    color: var(--white);
+    padding: 2rem;
+    width: 45%;
+    margin: 0 auto 0;    
+}
+
+.ProductenShop{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4rem 0 4rem 0;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.mainContact, .FormRevieuwProduct{
+    padding-left: 2rem;
+}
+
+.mainContact h1{
+    font-size: 3rem;
+    padding-bottom: 0;
+}
+
+input, #Keuze, textarea, .FormtoevoegenProduct, #FormtoevoegenProductMaten {
+    border: 1px solid black;
+}
+
+textarea{
+    width: 90%;
+    padding: 1rem 1rem 4rem 1rem;
+}
+
+legend{
+    padding: 4rem 0 2rem 0;
+    color:var(--themecolor)
+}
+
+#Naam, #Mail,.mainContact select{
+    width: 90%;
+    padding: 2rem;   
+}
+
+.mainContact ::placeholder, select, .FormRevieuwProduct{
+    color:var(--themecolor)
+}
+
+.mainContact select{
+    font-weight: bold;
+}
+
+.mainContact span{
+    color: red;
+}
+
+#SubmitFormscontactProduct{
+    margin-top: 2rem;
+    background-color:var(--themecolor);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+label{
+    font-size: 20px;
+}
+
+.mainContact p{
+    font-size: 20px;
+    padding: 1rem 0 3rem 0;
+}
+
+.InfoProductTekst{
+    font-size: x-large;
+    padding: 3rem 4rem 0;
+    text-align: justify;
+}
+
+.FigcaptionProduct{
+    font-weight: bolder;
+    color: black;
+}
+
+.InfoProductFoto{
+float: left;
+margin: 2rem;
+}
+
+.TitelsProductBeschijving{
+    font-weight: bold;
+}
+
+.RevieuwsProduct{
+    padding: 3rem 0 2rem 0;
+}
+
+.NavPijl{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: 2rem;
+}
+
+.Rating{
+    display: inline-flex;
+    align-items: center;
+    padding-top: 5px;
+    gap: 2rem;
+}
+    
+.ButtonProduct, .NavPijl, .FormtoevoegenProduct, #FormtoevoegenProductMaten{
+        background-color: var(--themecolor);
+        color: var(--white);
+        padding: 12px;
+    }
+    
+.ButtonProduct, .FormtoevoegenProduct, #FormtoevoegenProductMaten{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 3rem 0 0 7rem;
+}
+
+.ButtonProduct:hover, .FormtoevoegenProduct:hover, #FormtoevoegenProductMaten:hover{
+        background-color: var(--themecolor);
+        text-decoration: underline;
+}
+
+.submitAddToCart{
+    border: none;
+}
+/*main*/
+
+/*aside*/
+aside{
+    grid-area: Aside;
+    padding-left: 1rem;
+    border-left: var(--themecolor) 5px solid;
+}
+
+#asideContact{
+    padding-left: 2rem;
+}
+
+aside >h2{
+    font-size: 1.5rem;
+    padding: 3rem 0 1rem 0;
+    letter-spacing: 0.2rem;
+    text-align: left;
+}
+
+.AsideSection{
+    background-color: var(--themecolor);
+    color: var(--white);
+    padding: 10px 0 5px 1rem;    
+    width: 96%;
+    margin-top: 1rem;
+}
+
+aside a:hover, a:active{
+    text-decoration: underline;
+}
+
+#FitMap{
+    width: auto;
+    height: 70vh;
+    margin: 2rem 3rem 3rem 0;
+}
+
+.layoutCart{
+    background-color: var(--themecolor);
+    margin: 1rem 2rem 0 0;
+    height: 5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#WinkelwagenAside p{
+    display: flex;
+    word-spacing: 4rem;
+    align-items: center;
+    color: var(--white);
+    font-weight: bolder;
+}
+
+
+#titelWinkelwagenAside{
+    text-align: center;
+}
+
+#checkoutsum{
+    margin-top: 1rem;
+}
+
+.checkoutsum{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 2rem;
+    margin-bottom: 2px;
+    padding: 2px;
+    border: var(--themecolor) 1px solid;
+}
+
+.ListProductBeschrijving, .listasideproducten{
+    list-style: square;
+    list-style-position: inside;
+}
+
+.listasideproducten{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/*aside*/
+
+/*footer*/
+footer{
+    grid-area: footer;
+    background-color: var(--themecolor);
+    color: var(--white);
+    font-weight: bolder;
+    padding-top: 2rem;
+}
+
+.FooterIndexBoven{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.FooterIndexBoven section, option{
+    text-align: center;
+}
+
+
+footer h4{
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding-bottom: 10px;  
+}
+
+.Copyright{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.Copyright span{
+   padding: 0 3rem 3rem 3rem ;   
+}
+
+/*footer*/
+
+@media only screen and (max-width: 1700px){
+    .ProductenUitleg{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .InfoProductFoto{
+        margin: 0 auto 0;
+    }
+
+}
+
+      @media only screen and (max-width: 1145px) {
+        nav, .hiddenfooter, footer h4{
+            display: none;
+        }
+
+        .NavFooter{
+            display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 2rem;
+                font-size: small;
+                padding-bottom: 2rem;
+                font-weight: bold;
+        }
+
+        body{
+            display: grid;
+            grid-template-areas:
+            'header'
+            'main'
+            'Aside'
+            'footer';
+            grid-template-columns: 1fr;
+        }
+
+        .AsideSection{   
+            width: 45%;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+        aside{
+            border: none;
+            border-top: var(--themecolor) 5px solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #asideContact{
+            align-items: normal;
+        }
+
+        .checkoutsum{
+            margin: 0rem 10rem 0rem 10rem;
+        }
+        
+        .layoutCart{
+            margin: 0.5rem 10rem 0rem 10rem;
+        }
+
+        footer{
+            margin-top: 2rem;
+        }
+    }
+
+    @media only screen and (max-width: 1031px){
+
+        h1{
+            font-size: 2.5rem;
+        }
+
+        .FormsProductWish {
+            display:flex ;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .FormtoevoegenProduct, .FormsProductWish input, #FormtoevoegenProductMaten{
+            font-size: medium;
+            margin: 0.5rem;
+            text-align: center  ;
+        }
+        .ButtonProduct {
+            margin: 0 1rem 1rem 3rem;
+        }
+    
+        .ReclameProducten, .FotoZelfQuote, .RevieuwsKlanten{
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .FigcaptionProduct{
+            margin-bottom: 3rem;
+        }
+     
+        .ZoekbalkShop {
+            display: flex;
+            justify-content: center;
+            }
+        
+            #Zoekbalk, #Vergrootglas{
+                display: none;
+            }
+
+            footer{
+            margin-top: 2rem;
+            }
+
+        .checkoutsum{
+            margin: 0rem 3rem 0rem 3rem;
+        }
+        
+        .layoutCart{
+            margin: 0.5rem 3rem 0rem 3rem;
+        }
+    
+        .KlantBox{
+            height: 175px;
+            width: 350px;
+        }
+    }
+    @media only screen and (max-width: 800px){
+        .InfoProductFoto{
+            margin: 0 2rem 0 2rem;
+        }
+        
+        .Copyright, .Copyright a, .NavFooter a{
+            font-size: small;
+        }
+    }   
+
+   @media only screen and (max-width: 540px){
+   
+    .NavPijl{
+       display: none;
+    }
+    
+    .Rating{
+        display: inline-flex;
+        padding-top: 5px;
+        gap: 0.5rem;
+    }
+
+    .InfoProductTekst {
+        padding: 1rem 2rem 0;
+    }
+
+    .AsideSection{   
+        width: 70%;
+    }
+
+    #FotoProduct{
+        height: 350px;
+    }
+    
+    .RevieuwsKlanten section{
+        width: 65%;
+        margin: 0 0rem 0 3rem;
+    }
+    .ButtonProduct {
+        margin: 0 1rem 1rem 1rem;
+    }
+    
+    .Copyright, .Copyright a, #NieuwsletterTekst{
+        font-size: xx-small;
+    }
+
+    .ZoekbalkShop > input[type = "search"]{
+        font-size: 1.25rem;
+    }
+    
+    .checkoutsum{
+        margin: 0rem 3rem 0rem 3rem;
+    }
+    
+    .layoutCart{
+        margin: 0.5rem 3rem 0rem 3rem;
+    }
+
+    .KlantBox{
+        width: 350px;
+    }
+}  
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+
+    25%{
+        transform: rotate(360deg);
+    }
+
+    50%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(-360deg);
+    }
+}

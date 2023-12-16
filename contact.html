@@ -1,0 +1,108 @@
+<!DOCTYPE html>         
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitImproving | Contact</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./assets/Icons/faviconLogo.webp" type="image/x-icon">
+    <script src="js/map.js" type="module" defer></script>
+    <script src="js/form.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img src="assets/Images/Logo.webp" alt="Logo" id="LogoTop"></a>
+        <nav>
+            <a href="index.html">Home</a>
+            |
+            <a href="shop.html">Shop</a>
+            |
+            <a href="index.html#About">Over</a>
+            |
+            <a href="contact.html" class="Actief">Contact</a>
+            |
+            <a href="klanten.html">Klanten</a>
+        </nav>
+        <button id="Winkelwagen">
+            <a href="shop.html#titelWinkelwagenAside"><img src="assets/Icons/Karretje.webp" alt="Karretje"></a>
+        </button>
+    </header>
+    <main class="mainContact">
+        <h1>Contact</h1>
+        <form action="#" method="get"> 
+            <fieldset>
+                <legend>GEGEVENS</legend>
+                <label for="Naam">Voor- en achternaam<span>*</span></label><br><br>
+                <input type="text" name="Naam" id="Naam" placeholder="Voor- en achternaam" required><br><br>
+                <label for="Mail">E-mail<span>*</span></label><br><br>
+                <input type="email" name="Mail" id="Mail" placeholder="E-mail" required><br>
+            </fieldset>
+            <fieldset>
+                <legend>VRAAG</legend>
+                <label for="Keuze">Vraag is gericht aan<span>*</span></label><br><br>
+                <select name="Keuze" id="Keuze" required>
+                    <option value="" disabled selected hidden>--maak hier uw keuze--</option>
+                    <option value="Coach">Coach</option>
+                    <option value="BetaalDienst">Boekhouding</option>
+                    <option value="Klantenservice">Klantenservice</option>
+                </select><br><br>
+                <label for="Bericht">Bericht<span>*</span></label><br><br>
+                <textarea placeholder="Bericht" name="Bericht" id="Bericht" required></textarea>
+            </fieldset>
+            <input type="submit" value="indienen" id="SubmitFormscontactProduct">
+        </form>
+        <p><span>*</span> zijn verplichte in te vullen velden.</p>
+    </main>
+    <aside id="asideContact">
+        <h2>Contact</h2>
+        <section class="AsideSection">
+            <a href="https://www.google.com/maps/place/Turnhoutsebaan+247,+2100+Antwerpen/data=!4m2!3m1!1s0x47c3f7801f2a27f1:0x2a0ec6df74873445?sa=X&ved=2ahUKEwiCkaa9u-6BAxXv7rsIHa2lDJgQ8gF6BAgPEAA&ved=2ahUKEwiCkaa9u-6BAxXv7rsIHa2lDJgQ8gF6BAgSEAI">Turnhoutsebaan 247 2100 Antwerpen</a><br>
+            <a href="mailto:schoolopdracht437@gmail.com">Mail ons!</a><br>
+            <a href="tel: +32 3 111 11 111"> +32 3 111 11 111</a>
+        </section>
+        <h2>volg ons</h2>
+        <section>
+            <a href="https://www.facebook.com/profile.php?id=61552373541891"><img src="assets/Icons/facebookBrown.webp" alt="FacebookLogo" width="40px" height="40px" id="LinksSocial1"><a>
+            <a href="https://www.instagram.com/fitimprovingdeurne/"><img src="assets/Icons/instagramBrown.webp" alt="instagramLogo" width="40px" height="40px" id="LinksSocial2"></a>
+            <a href="https://twitter.com/FitImproving"><img src="assets/Icons/twitterBrown.webp" alt="twitterLogo" width="40px" height="40px" id="LinksSocial3"></a>
+        </section>
+        <div id="FitMap"></div>
+    </aside>
+    <footer>
+        <section class="FooterIndexBoven">
+            <img src="assets/Images/LogoFooter.webp" alt="Logo" class="hiddenfooter">
+            <section class="hiddenfooter">
+                <h4>Blijf op de hoogte</h4>
+                <a href="https://www.facebook.com/profile.php?id=61552373541891"><img src="assets/Icons/facebook-3-32.webp" alt="FacebookLogo" width="40px" height="40px" class="LinksSocial"><a>
+                <a href="https://www.instagram.com/fitimprovingdeurne/"><img src="assets/Icons/instagram-32.webp" alt="instagramLogo" width="40px" height="40px" class="LinksSocial"></a>
+                <a href="https://twitter.com/FitImproving"><img src="assets/Icons/twitter-3-32.webp" alt="twitterLogo" width="40px" height="40px" class="LinksSocial"></a>
+            </section>
+            <section>
+                <nav class="NavFooter">
+                    <H4>Menu</H4>
+                    <a href="index.html">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="index.html#About">Over</a>
+                    <a href="contact.html" class="Actief">Contact</a>
+                    <a href="klanten.html">Klanten</a>
+                </nav>
+            </section>
+            <section class="hiddenfooter">
+                <h4>Betaalmethoden</h4>
+                <img src="assets/Icons/ApplePay.webp" alt="ApplePay">
+                <img src="assets/Icons/Maestro.webp" alt="Maestro">
+                <img src="assets/Icons/Visa.webp" alt="Visa">
+                <img src="assets/Icons/Mastercard.webp" alt="Mastercard">
+            </section>
+        </section>
+        <p class="Copyright">&copy FitImpoving - All rights reserved. <span>|</span><a href="#LogoTop">Terug naar boven</a></p>
+    </footer>
+</body>
+</html>
