@@ -1,0 +1,20 @@
+version: "3.8"
+volumes: 
+  mymariadbdata: ~
+  php: ~
+services:
+  apache1: 
+    ports: 
+      - 8080:80
+    build: .
+    volumes:
+      - php:/var/www/html
+  db:
+    image: mariadb:latest
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      - MARIADB_ROOT_PASSWORD=wachtwoord
+    volumes: 
+      - mymariadbdata:/var/lib/mysql
