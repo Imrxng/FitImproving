@@ -6,7 +6,7 @@ services:
   apache1: 
     ports: 
       - 8080:80
-    build: .
+    image: imrxn21/deelopdracht:latest
     volumes:
       - php:/var/www/html
   db:
