@@ -17,7 +17,7 @@ on:
 
 env:
   # Use docker.io for Docker Hub if empty
-  REGISTRY: ghcr.io
+  REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ GITHUB.repository }}
 
@@ -27,10 +27,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       -
-        name: Login to GitHub Container Registry
+        name: Login to Docker Hub
         uses: docker/login-action@v3
         with:
-          registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
   build:
