@@ -15,11 +15,11 @@ on:
   pull_request:
     branches: [ "main" ]
 
-# env:
-#   # Use ghcr.io for Docker Hub if empty
-#   REGISTRY: ghcr.io
-#   # github.repository as <account>/<repo>
-#   IMAGE_NAME: ${{ GITHUB.repository }}
+env:
+  # Use docker.io for Docker Hub if empty
+  REGISTRY: docker.io
+  # github.repository as <account>/<repo>
+  IMAGE_NAME: ${{ GITHUB.repository }}
 
 
 jobs:
