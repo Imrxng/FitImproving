@@ -222,18 +222,5 @@
         </section>
         <p class="Copyright">&copy FitImpoving - All rights reserved. <span>|</span><a href="#LogoTop">Terug naar boven</a></p>
     </footer>
-    <?php
-
-        include_once("config.php");
-        $ip_address = $_SERVER['REMOTE_ADDR'];
-        $datum = date("Y-m-d H:i:s");
-
-
-        $stmt = $mysqli->prepare("INSERT INTO bezoekers (ip_adress, datum) VALUES (?, ?)");
-        $stmt->bind_param("ss", $ip_address, $datum);
-        $stmt->execute();
-
-    ?>
-
 </body>
 </html>
